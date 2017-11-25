@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-navbar color="nav">
+    <ion-title>
+      Juegos 2017
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+  <ion-list>
+    <ion-item *ngFor="let juego of juego">
+      <ion-thumbnail item-start>
+        <img src="{{juego.img}}">
+      </ion-thumbnail>
+        <h2>{{juego.nombre}}</h2>
+        <p>{{juego.empresa}}</p>
+      <button (click)="goToPageDetalle(juego.id)" ion-button block color="boton">Detalle</button>
+    </ion-item>
+  </ion-list>
+
+</ion-content>
